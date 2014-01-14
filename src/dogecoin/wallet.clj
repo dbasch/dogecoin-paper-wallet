@@ -6,7 +6,7 @@
            com.google.zxing.common.BitMatrix
            com.google.zxing.BarcodeFormat
            com.google.zxing.client.j2se.MatrixToImageWriter
-           [com.google.dogecoin.core Address ECKey NetworkParameters]))
+           [com.google.dogecoin.core Address DumpedPrivateKey ECKey NetworkParameters]))
 
 ;; generate qr code as an image
 (defn qr [s]
