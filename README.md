@@ -6,7 +6,7 @@ Generate a Dogecoin paper wallet offline, without the need for a browser.
 
 lein run
 
-The program will print out a private key and a public bitcoin address, and a wallet.png file
+The program will print out a private key and a public dogecoin address, and a wallet.png file
 that you can send to your printer (hopefully not connected to the internet). 
 The paper wallet is unencrypted, so keep it in a safe place.
 
@@ -18,7 +18,7 @@ The wallet will look like this:
 
  * Boot a live CD/USB of Ubuntu, don't connect it to a network.
  * run `lein uberjar` on a trusted computer, copy the jar file to a pen drive and then to the Ubuntu box.
- * run `java -jar bitcoin-[version]-SNAPSHOT-standalone.jar` on the Ubuntu box. 
+ * run `java -jar dogecoin-[version]-SNAPSHOT-standalone.jar` on the Ubuntu box. 
 
 ## WARNING WARNING WARNING 
 
