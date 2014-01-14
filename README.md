@@ -14,12 +14,18 @@ The wallet will look like this:
 
  ![wallet](https://raw.github.com/dbasch/dogecoin-paper-wallet/master/wallet.png)
 
+ You may want to do this on a computer that's never been connected to the internet. For example, you could:
+
+ * Boot a live CD/USB of Ubuntu, don't connect it to a network.
+ * run `lein uberjar` on a trusted computer, copy the jar file to a pen drive and then to the Ubuntu box.
+ * run `java -jar bitcoin-[version]-SNAPSHOT-standalone.jar` on the Ubuntu box. 
+
 ## WARNING WARNING WARNING 
 
 Be very careful when using this program. It uses the [dogecoinj](https://github.com/langerhans/dogecoinj-new) library for key generation
  so I'm not responsible for any bugs that might generate insecure wallets. Use at your own risk.
 
-Find this useful? send me a tip at DHpZsQCDKq9WbqyqfetMcGq87pFZfkwLBh :)
+Find this useful? send me a tip at **DHpZsQCDKq9WbqyqfetMcGq87pFZfkwLBh** :)
 
 ## License
 

@@ -15,7 +15,7 @@
     (MatrixToImageWriter/toBufferedImage matrix)))
 
 (defn address [k]
-  (Address. (NetworkParameters/prodNet) (.getPubKeyHash k)))
+  (.toAddress k (NetworkParameters/prodNet)))
 
 (defn gen-image [qr-key qr-add key-str add-str]
   ;; I'm no artist, I just draw everything with absolute coordinates
@@ -40,13 +40,14 @@
     (javax.imageio.ImageIO/write img "png" (java.io.File. "wallet.png"))))
 
 (defn gen-key []
-  ;; hack to get the key uncompressed, because dogecoinj makes it compressed by default.
-  (.getPrivateKeyEncoded (ECKey. (.getPrivKeyBytes (ECKey.)) nil) (NetworkParameters/prodNet)))
+  (.getPrivateKeyEncoded (ECKey.) (NetworkParameters/prodNet)))
 
 (defn gen-wallet []
   (let [k (gen-key)
         key-str (.toString k)
-        add-str (.toString (address (.getKey k)))
+        p (NetworkParameters/prodNet)
+        dk (DumpedPrivateKey. p key-str)
+        add-str (.toString (.toAddress (.getKey dk) p))
         qr-key (qr key-str)
         qr-add (qr add-str)]
     (println "Address:" add-str "\nKey:" key-str)
@@ -54,3 +55,8 @@
 
 (defn -main [& args]
   (when (gen-wallet) (println "Print wallet.png and delete or encrypt the file. Don't share the above key with anyone, ever.")))
+
+
+
+
+
