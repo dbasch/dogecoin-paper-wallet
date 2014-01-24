@@ -49,7 +49,7 @@
     (.drawString g "SHARE" 210 30)
     (.setPaint g (Color/RED))
     (.drawString g "SECRET" 695 30)
-    (javax.imageio.ImageIO/write img "png" (java.io.File. "dogewallet.png"))))
+    (javax.imageio.ImageIO/write img "png" (java.io.File. "wallet.png"))))
 
 (defn gen-key []
   (.getPrivateKeyEncoded (ECKey.) (np)))
