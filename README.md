@@ -1,10 +1,12 @@
 # dogecoin-paper-wallet
 
-Generate a Dogecoin paper wallet offline, without the need for a browser.
+Generate a Dogecoin paper wallet offline, from the command line of your terminal.
 
 ## Usage
 
-lein run
+First, install [leiningen](http://leiningen.org/) if you don't have it. Then type:
+
+`lein run`
 
 The program will print out a private key and a public dogecoin address, and a wallet.png file
 that you can send to your printer (hopefully not connected to the internet). 
