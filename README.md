@@ -36,7 +36,6 @@ You will need your passphrase when you want to convert it into the Wallet Import
 
 If you do this, you should either memorize your passphase or keep it in a safe place separate from the wallet. Otherwise, you might as well generate it unencrypted.
 
-
 ## WARNING WARNING WARNING 
 
 Be very careful when using this program. It uses the bitcoinj library for key generation
